@@ -12,6 +12,7 @@ const MovieCard = ({ movie }) => {
             alt={movie.title}
             className="poster"
           />
+          <div className="movie-title">{movie.title}</div> {/* <-- moved inside */}
           <div className="card-hover-info">
             <p><strong>Genre:</strong> {movie.genre.join(', ')}</p>
             <p><strong>Year:</strong> {movie.year}</p>
@@ -20,7 +21,7 @@ const MovieCard = ({ movie }) => {
           </div>
         </div>
       </Link>
-      <div className="movie-title">{movie.title}</div>
+      
     </div>
   );
 };
