@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
           className="poster"
         />
         <div className="card-hover-info">
-          <div className="movie-title">{movie.title}</div>
+          <h3 className="hover-title">{movie.title}</h3>
           <p><strong>Genre:</strong> {movie.genre.join(', ')}</p>
           <p><strong>Year:</strong> {movie.year}</p>
           <p><strong>Rating:</strong> ⭐ {movie.rating}</p>
