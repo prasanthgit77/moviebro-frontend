@@ -8,7 +8,7 @@ const MovieCard = ({ movie }) => {
       <Link to={`/movie/${movie._id}`} className="movie-card-link">
         <div className="movie-card">
           <img
-            src={`http://localhost:5000${movie.posterUrl}`}
+            src={`https://moviebro-backend.onrender.com${movie.posterUrl}`}
             alt={movie.title}
             className="poster"
           />

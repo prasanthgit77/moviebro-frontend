@@ -8,7 +8,7 @@ const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/movies/${id}`)
+    axios.get(`https://moviebro-backend.onrender.com/api/movies/${id}`)
       .then((res) => setMovie(res.data))
       .catch((err) => console.error(err));
   }, [id]);
@@ -18,7 +18,7 @@ const MovieDetail = () => {
   return (
     <div className="movie-detail">
       <Link to="/" className="back">⬅ Back</Link>
-      <img src={`http://localhost:5000${movie.posterUrl}`} alt={movie.title} />
+      <img src={`https://moviebro-backend.onrender.com${movie.posterUrl}`} alt={movie.title} />
       <h2>{movie.title}</h2>
       <p><strong>Year:</strong> {movie.year}</p>
       <p><strong>Genres:</strong> {movie.genre.join(', ')}</p>

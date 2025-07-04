@@ -8,7 +8,7 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const fetchMovies = async () => {
-    const res = await axios.get('http://localhost:5000/api/movies/latest');
+    const res = await axios.get('https://moviebro-backend.onrender.com/api/movies/latest');
     setMovies(res.data);
   };
 
@@ -23,7 +23,7 @@ const Home = () => {
     if (term.trim() === '') {
       fetchMovies();
     } else {
-      const res = await axios.get(`http://localhost:5000/api/movies/search?q=${term}`);
+      const res = await axios.get(`https://moviebro-backend.onrender.com/api/movies/search?q=${term}`);
       setMovies(res.data);
     }
   };
