@@ -1,8 +1,13 @@
+.movie-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .movie-card {
   width: 360px;
   height: 200px;
   position: relative;
-  margin: 16px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 191, 255, 0.15);
@@ -44,18 +49,12 @@
 }
 
 .movie-title {
-  position: absolute;
-  bottom: 8px;
-  left: 12px;
+  margin-top: 8px;
+  font-weight: 600;
   color: #00BFFF;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 16px;
-  z-index: 1;
+  font-size: 18px;
+  text-align: center;
 }
-
 
 @media screen and (max-width: 768px) {
  .movie-card {

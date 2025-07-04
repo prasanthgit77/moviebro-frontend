@@ -4,22 +4,24 @@ import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   return (
-    <Link to={`/movie/${movie._id}`} className="movie-card-link">
-      <div className="movie-card">
-        <img
-          src={`https://moviebro-backend.onrender.com${movie.posterUrl}`}
-          alt={movie.title}
-          className="poster"
-        />
-        <div className="card-hover-info">
-          <h3 className="hover-title">{movie.title}</h3>
-          <p><strong>Genre:</strong> {movie.genre.join(', ')}</p>
-          <p><strong>Year:</strong> {movie.year}</p>
-          <p><strong>Rating:</strong> ⭐ {movie.rating}</p>
-          <p><strong>Platforms:</strong> {movie.platforms.join(', ')}</p>
+    <div className="movie-wrapper">
+      <Link to={`/movie/${movie._id}`} className="movie-card-link">
+        <div className="movie-card">
+          <img
+            src={`https://moviebro-backend.onrender.com${movie.posterUrl}`}
+            alt={movie.title}
+            className="poster"
+          />
+          <div className="card-hover-info">
+            <p><strong>Genre:</strong> {movie.genre.join(', ')}</p>
+            <p><strong>Year:</strong> {movie.year}</p>
+            <p><strong>Rating:</strong> ⭐ {movie.rating}</p>
+            <p><strong>Platforms:</strong> {movie.platforms.join(', ')}</p>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+      <div className="movie-title">{movie.title}</div>
+    </div>
   );
 };
 
