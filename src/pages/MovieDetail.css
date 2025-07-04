@@ -1,0 +1,20 @@
+.movie-detail {
+  padding: 40px;
+  color: #222;
+  max-width: 800px;
+  margin: auto;
+}
+
+.movie-detail img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
